@@ -1,0 +1,762 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="26.05.2025 12:02:46">
+	<shop>
+		<name>INSUA</name>
+		<company>INSUA</company>
+		<url>https://sportidea.com.ua/</url>
+		<currencies>
+			<currency id="UAH" rate="1"/>
+		</currencies>
+		<categories>
+			<category id="00000000001">Under Armour old</category>
+			<category id="00000001749">Nike</category>
+			<category id="00000003028">Asics</category>
+			<category id="00000003549">Adidas old</category>
+			<category id="00000003550">Reebok old</category>
+			<category id="00000004491">KAPPA</category>
+			<category id="00000005097">HEAD</category>
+			<category id="00000007245">Tatkan</category>
+			<category id="00000007838">Puma_2020</category>
+			<category id="00000008165">SERGIO TACCHINI</category>
+			<category id="00000008166">LOTTO</category>
+			<category id="00000009426">Harry Potter</category>
+			<category id="00000009433">PENN</category>
+			<category id="00000009446">Slazenger</category>
+			<category id="00000009869">Ліцензія</category>
+			<category id="00000011524">Everlast</category>
+			<category id="00000011786">Lulu Castagnette</category>
+			<category id="00000011787">Manoukian</category>
+			<category id="00000011788">Infinitif</category>
+			<category id="00000011789">Fashion Lady</category>
+			<category id="00000011790">ORO</category>
+			<category id="00000012818">Playboy</category>
+			<category id="00000013043">Select</category>
+			<category id="00000013081">New York Yankees</category>
+			<category id="00000013376">Joma</category>
+			<category id="00000013903">Schildkröt</category>
+			<category id="00000015131">AQUA SPEED</category>
+			<category id="00000015893">SPEEDO</category>
+			<category id="00000016204">Jako</category>
+			<category id="00000017629">47 Brand</category>
+			<category id="00000017857">Saucony</category>
+			<category id="00000017968">Arena</category>
+			<category id="00000018299">PRO TOUCH</category>
+			<category id="00000021774">MADON</category>
+			<category id="00000024854">Under Armour</category>
+			<category id="00000025120">Puma_2023</category>
+			<category id="00000026126">Reebok фітнес</category>
+			<category id="00000026127">Adidas фітнес</category>
+			<category id="00000029092">Meta</category>
+			<category id="00000029345">Adidas</category>
+			<category id="00000030287">Zeus</category>
+			<category id="00000034093">HEAD2024</category>
+			<category id="00000000110" parentId="00000000001">Одяг</category>
+			<category id="00000000141" parentId="00000000001">Аксесуари</category>
+			<category id="00000001750" parentId="00000001749">Одяг</category>
+			<category id="00000001796" parentId="00000001749">Аксесуари</category>
+			<category id="00000001831" parentId="00000001749">Взуття</category>
+			<category id="00000013895" parentId="00000001749">Пляшки для води</category>
+			<category id="00000013896" parentId="00000001749">Гетри футбольні</category>
+			<category id="00000013899" parentId="00000001749">Шкарпетки</category>
+			<category id="00000013900" parentId="00000001749">Головні убори</category>
+			<category id="00000013902" parentId="00000001749">М'ячі волейбольні</category>
+			<category id="00000015990" parentId="00000001749">М'ячі баскетбольні</category>
+			<category id="00000021899" parentId="00000001749">Рюкзаки</category>
+			<category id="00000021900" parentId="00000001749">Сумки</category>
+			<category id="00000029790" parentId="00000001749">Насоси</category>
+			<category id="00000003143" parentId="00000003028">Взуття</category>
+			<category id="00000003290" parentId="00000003028">Одяг</category>
+			<category id="00000026023" parentId="00000003028">Взуття для боротьби</category>
+			<category id="00000033215" parentId="00000003028">Шкарпетки</category>
+			<category id="00000033217" parentId="00000003028">Рюкзаки</category>
+			<category id="00000003551" parentId="00000003549">Аксессуары</category>
+			<category id="00000003554" parentId="00000003549">Сумки и рюкзаки</category>
+			<category id="00000003556" parentId="00000003550">Одежда</category>
+			<category id="00000003557" parentId="00000003550">Обувь</category>
+			<category id="00000004492" parentId="00000004491">Аксесуари</category>
+			<category id="00000013484" parentId="00000004491">Одяг</category>
+			<category id="00000020933" parentId="00000005097">Шкарпетки CREW</category>
+			<category id="00000020934" parentId="00000005097">Шкарпетки FOOTIE</category>
+			<category id="00000020935" parentId="00000005097">Шкарпетки SHORT CREW</category>
+			<category id="00000020936" parentId="00000005097">Шкарпетки QUARTER</category>
+			<category id="00000020937" parentId="00000005097">Шкарпетки SNEAKER</category>
+			<category id="00000020938" parentId="00000005097">Шкарпетки MATCH</category>
+			<category id="00000020939" parentId="00000005097">Шкарпетки трекінгові</category>
+			<category id="00000020940" parentId="00000005097">Шкарпетки гірськолижні</category>
+			<category id="00000020941" parentId="00000005097">Труси BASIC BOXER</category>
+			<category id="00000020942" parentId="00000005097">Труси BASIC BRIEF</category>
+			<category id="00000020944" parentId="00000005097">Шкарпетки PERFORMANCE CREW</category>
+			<category id="00000020945" parentId="00000005097">Шкарпетки PERFORMANCE QUARTER</category>
+			<category id="00000020946" parentId="00000005097">Шкарпетки PERFORMANCE SHORT CREW</category>
+			<category id="00000020947" parentId="00000005097">Шкарпетки PERFORMANCE SNEAKER</category>
+			<category id="00000007246" parentId="00000007245">Одяг</category>
+			<category id="00000008064" parentId="00000007838">Аксесуари</category>
+			<category id="00000008168" parentId="00000008165">Аксесуари</category>
+			<category id="00000009079" parentId="00000008166">Аксесуари</category>
+			<category id="00000009427" parentId="00000009426">Шкарпетки</category>
+			<category id="00000009434" parentId="00000009433">Аксесуари</category>
+			<category id="00000009447" parentId="00000009446">Одяг</category>
+			<category id="00000035844" parentId="00000009869">Аксесуари Avengers</category>
+			<category id="00000035845" parentId="00000009869">Аксесуари CARS</category>
+			<category id="00000035846" parentId="00000009869">Аксесуари CRUELLA</category>
+			<category id="00000035847" parentId="00000009869">Аксесуари Fees</category>
+			<category id="00000035848" parentId="00000009869">Аксесуари FROZEN</category>
+			<category id="00000035849" parentId="00000009869">Аксесуари LAPINS</category>
+			<category id="00000035850" parentId="00000009869">Аксесуари LOONEY TUNES</category>
+			<category id="00000035852" parentId="00000009869">Аксесуари NEMO-BEBE</category>
+			<category id="00000035853" parentId="00000009869">Аксесуари PAW PATROL</category>
+			<category id="00000035854" parentId="00000009869">Аксесуари Disney</category>
+			<category id="00000035855" parentId="00000009869">Аксесуари HELLO KITTY</category>
+			<category id="00000035856" parentId="00000009869">Аксесуари MARVEL</category>
+			<category id="00000035857" parentId="00000009869">Аксесуари MINION</category>
+			<category id="00000035860" parentId="00000009869">Аксесуари PEPPA PIG</category>
+			<category id="00000035861" parentId="00000009869">Аксесуари PJ MASKS</category>
+			<category id="00000035862" parentId="00000009869">Аксесуари PRINCESS</category>
+			<category id="00000035863" parentId="00000009869">Аксесуари SIMPSON</category>
+			<category id="00000035864" parentId="00000009869">Аксесуари SPIDER MAN</category>
+			<category id="00000035865" parentId="00000009869">Аксесуари STAR WARS</category>
+			<category id="00000011525" parentId="00000011524">Взуття</category>
+			<category id="00000011579" parentId="00000011524">Шкарпетки</category>
+			<category id="00000024537" parentId="00000011524">Рукавиці</category>
+			<category id="00000024601" parentId="00000011524">Бинти</category>
+			<category id="00000024602" parentId="00000011524">Бинти-рукавички</category>
+			<category id="00000025252" parentId="00000011524">Захист</category>
+			<category id="00000025254" parentId="00000011524">Аксесуари</category>
+			<category id="00000025289" parentId="00000011524">Сумки</category>
+			<category id="00000026369" parentId="00000011524">Головні убори</category>
+			<category id="00000026371" parentId="00000011524">Одяг</category>
+			<category id="00000026378" parentId="00000011524">Рюкзаки</category>
+			<category id="00000012252" parentId="00000011786">Аксесуари</category>
+			<category id="00000012253" parentId="00000011787">Аксесуари</category>
+			<category id="00000012251" parentId="00000011788">Аксесуари</category>
+			<category id="00000012250" parentId="00000011789">Аксесуари</category>
+			<category id="00000012254" parentId="00000011790">Аксесуари</category>
+			<category id="00000012819" parentId="00000012818">Аксесуари</category>
+			<category id="00000013044" parentId="00000013043">Аксесуари</category>
+			<category id="00000014464" parentId="00000013043">М'ячі футбольні</category>
+			<category id="00000014465" parentId="00000013043">М'ячі футзальні</category>
+			<category id="00000014466" parentId="00000013043">М'ячі баскетбольні</category>
+			<category id="00000014467" parentId="00000013043">М'ячі волейбольні</category>
+			<category id="00000014957" parentId="00000013043">Гетри футбольні</category>
+			<category id="00000014958" parentId="00000013043">Сумки</category>
+			<category id="00000014959" parentId="00000013043">Рукавички воротарські</category>
+			<category id="00000014960" parentId="00000013043">Щитки футбольні</category>
+			<category id="00000034196" parentId="00000013043">Рюкзаки</category>
+			<category id="00000013082" parentId="00000013081">Аксесуари</category>
+			<category id="00000013377" parentId="00000013376">Аксесуари</category>
+			<category id="00000013411" parentId="00000013376">Сумки</category>
+			<category id="00000013415" parentId="00000013376">Шкарпетки</category>
+			<category id="00000013416" parentId="00000013376">Гетри футбольні</category>
+			<category id="00000013417" parentId="00000013376">М'ячі футбольні</category>
+			<category id="00000013893" parentId="00000013376">Наколінники, налокітники</category>
+			<category id="00000014019" parentId="00000013376">Щитки футбольні</category>
+			<category id="00000014020" parentId="00000013376">Головні убори</category>
+			<category id="00000014087" parentId="00000013376">М'ячі футзальні</category>
+			<category id="00000014429" parentId="00000013376">Одяг</category>
+			<category id="00000016068" parentId="00000013376">Рукавички воротарські</category>
+			<category id="00000022919" parentId="00000013376">Взуття - Бутси для дорослих</category>
+			<category id="00000022920" parentId="00000013376">Взуття - Бутси для дітей</category>
+			<category id="00000022921" parentId="00000013376">Взуття - Футзалки для дорослих</category>
+			<category id="00000022922" parentId="00000013376">Взуття - Футзалки для дітей</category>
+			<category id="00000022923" parentId="00000013376">Взуття - Сороконіжки для дітей</category>
+			<category id="00000022924" parentId="00000013376">Взуття - Сороконіжки для дорослих</category>
+			<category id="00000027330" parentId="00000013376">М'ячі регбійні</category>
+			<category id="00000034195" parentId="00000013376">Рюкзаки</category>
+			<category id="00000013904" parentId="00000013903">Самокати трюкові</category>
+			<category id="00000013905" parentId="00000013903">Самокати міські</category>
+			<category id="00000013906" parentId="00000013903">Скейтборди, лонгборди, вейвборди</category>
+			<category id="00000015132" parentId="00000015131">Сумки</category>
+			<category id="00000015148" parentId="00000015131">Аксесуари</category>
+			<category id="00000015163" parentId="00000015131">Взуття - Шльопанці для дорослих</category>
+			<category id="00000015278" parentId="00000015131">Окуляри для плавання для дорослих</category>
+			<category id="00000015383" parentId="00000015131">Ласти</category>
+			<category id="00000015719" parentId="00000015131">Набори для підводного плавання</category>
+			<category id="00000015887" parentId="00000015131">Аквафітнес</category>
+			<category id="00000015888" parentId="00000015131">Шапки для плавання</category>
+			<category id="00000015889" parentId="00000015131">Одяг жіночий</category>
+			<category id="00000015890" parentId="00000015131">Одяг чоловічий</category>
+			<category id="00000015891" parentId="00000015131">Одяг для хлопчиків</category>
+			<category id="00000020148" parentId="00000015131">Маски</category>
+			<category id="00000022185" parentId="00000015131">Одяг для дівчаток</category>
+			<category id="00000022186" parentId="00000015131">Одяг дитячий пляжний</category>
+			<category id="00000022187" parentId="00000015131">Окуляри для плавання для дітей</category>
+			<category id="00000022904" parentId="00000015131">Взуття - Аквашузи</category>
+			<category id="00000022905" parentId="00000015131">Взуття - Крокси і Сандалі</category>
+			<category id="00000022906" parentId="00000015131">Взуття - Шкарпетки для басейну</category>
+			<category id="00000022908" parentId="00000015131">Взуття - Шльопанці для дітей</category>
+			<category id="00000033212" parentId="00000015131">Рюкзаки</category>
+			<category id="00000015894" parentId="00000015893">Аксесуари</category>
+			<category id="00000015897" parentId="00000015893">Окуляри для плавання</category>
+			<category id="00000015901" parentId="00000015893">Шапки для плавання</category>
+			<category id="00000015914" parentId="00000015893">Взуття</category>
+			<category id="00000026562" parentId="00000015893">Сумки</category>
+			<category id="00000016205" parentId="00000016204">Аксесуари</category>
+			<category id="00000022925" parentId="00000016204">Гетри футбольні</category>
+			<category id="00000022926" parentId="00000016204">Головні убори</category>
+			<category id="00000022927" parentId="00000016204">М'ячі футбольні</category>
+			<category id="00000022928" parentId="00000016204">Сумки</category>
+			<category id="00000022929" parentId="00000016204">Шкарпетки</category>
+			<category id="00000022930" parentId="00000016204">Рукавички воротарські</category>
+			<category id="00000025562" parentId="00000016204">Щитки футбольні</category>
+			<category id="00000027378" parentId="00000016204">Взуття - Бутси для дітей</category>
+			<category id="00000034194" parentId="00000016204">Рюкзаки</category>
+			<category id="00000017630" parentId="00000017629">Головні убори</category>
+			<category id="00000017858" parentId="00000017857">Взуття</category>
+			<category id="00000017969" parentId="00000017968">Взуття</category>
+			<category id="00000017991" parentId="00000017968">Аксесуари</category>
+			<category id="00000017995" parentId="00000017968">Окуляри для плавання для дорослих</category>
+			<category id="00000018001" parentId="00000017968">Аквафітнес</category>
+			<category id="00000018043" parentId="00000017968">Шапки для плавання</category>
+			<category id="00000018895" parentId="00000017968">Одяг чоловічий</category>
+			<category id="00000018898" parentId="00000017968">Одяг дитячий</category>
+			<category id="00000018977" parentId="00000017968">Ласти</category>
+			<category id="00000018989" parentId="00000017968">Пляшки для води</category>
+			<category id="00000019013" parentId="00000017968">Набори</category>
+			<category id="00000019505" parentId="00000017968">Одяг жіночий</category>
+			<category id="00000022909" parentId="00000017968">Окуляри для плавання для дітей</category>
+			<category id="00000024043" parentId="00000017968">Сумки</category>
+			<category id="00000028437" parentId="00000017968">Чохли для окулярів</category>
+			<category id="00000033213" parentId="00000017968">Рюкзаки</category>
+			<category id="00000018304" parentId="00000018299">Аксесуари</category>
+			<category id="00000021775" parentId="00000021774">Шахмати</category>
+			<category id="00000032173" parentId="00000021774">Нарди</category>
+			<category id="00000024855" parentId="00000024854">Аксесуари</category>
+			<category id="00000024858" parentId="00000024854">Сумки</category>
+			<category id="00000024866" parentId="00000024854">Одяг</category>
+			<category id="00000025107" parentId="00000024854">Рюкзаки</category>
+			<category id="00000025108" parentId="00000024854">Головні убори</category>
+			<category id="00000025109" parentId="00000024854">Шкарпетки</category>
+			<category id="00000025431" parentId="00000024854">Взуття</category>
+			<category id="00000025121" parentId="00000025120">Головні убори</category>
+			<category id="00000025161" parentId="00000025120">Аксесуари</category>
+			<category id="00000025169" parentId="00000025120">Рюкзаки</category>
+			<category id="00000025190" parentId="00000025120">М'ячі футбольні</category>
+			<category id="00000025204" parentId="00000025120">Сумки</category>
+			<category id="00000031190" parentId="00000025120">Пляшки для води</category>
+			<category id="00000031266" parentId="00000025120">Взуття</category>
+			<category id="00000031278" parentId="00000025120">Гетри футбольні</category>
+			<category id="00000032973" parentId="00000025120">М'ячі баскетбольні</category>
+			<category id="00000032991" parentId="00000025120">М'ячі гандбольні</category>
+			<category id="00000034826" parentId="00000025120">Одяг</category>
+			<category id="00000034828" parentId="00000025120">М'ячі футзальні</category>
+			<category id="00000037858" parentId="00000025120">Щитки</category>
+			<category id="00000026214" parentId="00000026126">Килимки</category>
+			<category id="00000026221" parentId="00000026126">Аксесуари</category>
+			<category id="00000026240" parentId="00000026126">Обважнювачі</category>
+			<category id="00000026256" parentId="00000026126">Рукавиці</category>
+			<category id="00000026276" parentId="00000026126">Гантелі</category>
+			<category id="00000026320" parentId="00000026126">Фіксатори</category>
+			<category id="00000026128" parentId="00000026127">Еспандери</category>
+			<category id="00000026130" parentId="00000026127">Аксесуари</category>
+			<category id="00000026140" parentId="00000026127">Килимки</category>
+			<category id="00000026158" parentId="00000026127">Обважнювачі</category>
+			<category id="00000026162" parentId="00000026127">Фіксатори</category>
+			<category id="00000036498" parentId="00000026127">Пов'язки на голову</category>
+			<category id="00000029093" parentId="00000029092">Бар'єри та сходи</category>
+			<category id="00000029094" parentId="00000029092">Ворота</category>
+			<category id="00000029095" parentId="00000029092">Для арбітрів</category>
+			<category id="00000029096" parentId="00000029092">Для тренувань</category>
+			<category id="00000029097" parentId="00000029092">Тактичні дошки</category>
+			<category id="00000029098" parentId="00000029092">Конуси та жердини</category>
+			<category id="00000029099" parentId="00000029092">Манекени</category>
+			<category id="00000029102" parentId="00000029092">Сумки</category>
+			<category id="00000029103" parentId="00000029092">Фізична підготовка</category>
+			<category id="00000030023" parentId="00000029092">Аксесуари</category>
+			<category id="00000030283" parentId="00000029092">Манішки</category>
+			<category id="00000030284" parentId="00000029092">Пов'язки</category>
+			<category id="00000029088" parentId="00000029345">Головні убори</category>
+			<category id="00000029089" parentId="00000029345">Пляшки для води</category>
+			<category id="00000029091" parentId="00000029345">Шкарпетки</category>
+			<category id="00000029280" parentId="00000029345">Рюкзаки</category>
+			<category id="00000029335" parentId="00000029345">Сумки</category>
+			<category id="00000031871" parentId="00000029345">М'ячі футбольні</category>
+			<category id="00000034652" parentId="00000029345">Окуляри для плавання для дорослих</category>
+			<category id="00000034663" parentId="00000029345">Щитки футбольні</category>
+			<category id="00000034670" parentId="00000029345">Рушники</category>
+			<category id="00000034681" parentId="00000029345">Рукавички воротарські</category>
+			<category id="00000034929" parentId="00000029345">Аксесуари</category>
+			<category id="00000034935" parentId="00000029345">Окуляри для плавання для дітей</category>
+			<category id="00000035197" parentId="00000029345">Взуття</category>
+			<category id="00000030288" parentId="00000030287">Аксесуари</category>
+			<category id="00000030289" parentId="00000030287">Гетри футбольні</category>
+			<category id="00000030290" parentId="00000030287">М'ячі футбольні</category>
+			<category id="00000030293" parentId="00000030287">Рукавички воротарські</category>
+			<category id="00000030294" parentId="00000030287">Сумки та рюкзаки</category>
+			<category id="00000030295" parentId="00000030287">Щитки</category>
+			<category id="00000030892" parentId="00000030287">Одяг вітровки</category>
+			<category id="00000030893" parentId="00000030287">Одяг костюми спортивні</category>
+			<category id="00000030894" parentId="00000030287">Одяг форма</category>
+			<category id="00000030895" parentId="00000030287">Одяг футболки</category>
+			<category id="00000030896" parentId="00000030287">Одяг шорти</category>
+			<category id="00000030911" parentId="00000030287">Пляшки</category>
+			<category id="00000033075" parentId="00000030287">Головні убори</category>
+			<category id="00000034094" parentId="00000034093">ALL SPORTS</category>
+			<category id="00000034095" parentId="00000034093">ELEMENTS</category>
+			<category id="00000034096" parentId="00000034093">Шкарпетки трекінгові</category>
+		</categories>
+		<offers>
+			<offer id="00000017754" available="true">
+				<categoryId>00000017630</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Кепка 47 Brand ANAHEIM DUCKS хакі, чорний Уні OSFA</name>
+				<price>1730</price>
+				<stock_quantity>2</stock_quantity>
+				<description>Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>47 Brand</vendor>
+				<vendorCode>H-SECMV25PTP-ZJ</vendorCode>
+				<barcode>196002731148</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/H-SECMV25PTP-ZJ.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/H-SECMV25PTP-ZJ_2.jpg</picture>
+				<param name="Англійське найменування">47 Brand ANAHEIM DUCKS</param>
+				<param name="Бренд">47 Brand</param>
+				<param name="Колір">хакі, чорний</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">OSFA</param>
+				<param name="Склад">100% бавовна</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000036541" available="true">
+				<categoryId>00000017630</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Кепка 47 Brand ANIMAL BASE RUNNER ICON зелений Уні One Size</name>
+				<price>1590</price>
+				<stock_quantity>2</stock_quantity>
+				<description>Кепка 47 Brand створена для захисту очей і голови в сонячний день. Кепка має високу повітропроникність і зносостійкість. Легко прийме форму голови завдяки регульованій застібці, яка знаходиться ззаду кепки. Плоскі внутрішні шви практично не відчуваються, тому не будуть доставляти дискомфорт.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Кепка 47 Brand створена для захисту очей і голови в сонячний день. Кепка має високу повітропроникність і зносостійкість. Легко прийме форму голови завдяки регульованій застібці, яка знаходиться ззаду кепки. Плоскі внутрішні шви практично не відчуваються, тому не будуть доставляти дискомфорт.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>47 Brand</vendor>
+				<vendorCode>BSRIC1411GWS-FF</vendorCode>
+				<barcode>198742422621</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/BSRIC1411GWS-FF.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/BSRIC1411GWS-FF_2.jpg</picture>
+				<param name="Англійське найменування">47 Brand ANIMAL BASE RUNNER ICON</param>
+				<param name="Бренд">47 Brand</param>
+				<param name="Колір">зелений</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">ONE SIZE</param>
+				<param name="Склад">100% бавовна</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000023574" available="true">
+				<categoryId>00000017630</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Кепка 47 Brand BATTER MAN LOGO BASE RUNNER білий Уні OSFA</name>
+				<price>950</price>
+				<stock_quantity>2</stock_quantity>
+				<description>Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>47 Brand</vendor>
+				<vendorCode>MLB-BRMPS01WBP-WH</vendorCode>
+				<barcode>196895642170</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/MLB-BRMPS01WBP-WH.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/MLB-BRMPS01WBP-WH_2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/MLB-BRMPS01WBP-WH_3.jpg</picture>
+				<param name="Англійське найменування">47 Brand BATTER MAN LOGO BASE RUNNER</param>
+				<param name="Бренд">47 Brand</param>
+				<param name="Колір">білий</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">OSFA</param>
+				<param name="Склад">85% акрил, 15% бавовна</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000023788" available="true">
+				<categoryId>00000017630</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Кепка 47 Brand BOSTON RED SOX CAMPUS вінтажний синій, рожевий, зелений Уні OSFA</name>
+				<price>1600</price>
+				<stock_quantity>2</stock_quantity>
+				<description>Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>47 Brand</vendor>
+				<vendorCode>B-CAMPC02GWS-VN</vendorCode>
+				<barcode>196895641067</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/B-CAMPC02GWS-VN.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/B-CAMPC02GWS-VN_2.jpg</picture>
+				<param name="Англійське найменування">47 Brand BOSTON RED SOX CAMPUS</param>
+				<param name="Бренд">47 Brand</param>
+				<param name="Колір">вінтажний синій, рожевий, зелений</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">OSFA</param>
+				<param name="Склад">100% бавовна</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000023583" available="true">
+				<categoryId>00000017630</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Кепка 47 Brand BOSTON RED SOX RAISED BASIC темно-синій Уні OSFA</name>
+				<price>1440</price>
+				<stock_quantity>2</stock_quantity>
+				<description>Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>47 Brand</vendor>
+				<vendorCode>B-RAC02CTP-NY</vendorCode>
+				<barcode>193234074845</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/B-RAC02CTP-NY.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/B-RAC02CTP-NY_2.jpg</picture>
+				<param name="Англійське найменування">47 Brand BOSTON RED SOX RAISED BASIC</param>
+				<param name="Бренд">47 Brand</param>
+				<param name="Колір">темно-синій</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">OSFA</param>
+				<param name="Склад">100% бавовна</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000023777" available="true">
+				<categoryId>00000017630</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Кепка 47 Brand CHICAGO BLACKHAWKS SURE SHOT чорний, червоний Уні OSFA</name>
+				<price>1720</price>
+				<stock_quantity>3</stock_quantity>
+				<description>Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Оптимальний вибір для активного відпочинку та повсякденного носіння. Високоякісний матеріал забезпечує максимальний комфорт. Козирок забезпечує захист від негативного впливу сонячних променів. Для комфортного підганяння передбачена регульована застібка. Практичний дизайн доповнить стильний спортивний образ.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>47 Brand</vendor>
+				<vendorCode>HVIN-SUMVP04WBP-BK94</vendorCode>
+				<barcode>196895641906</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/HVIN-SUMVP04WBP-BK94.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/HVIN-SUMVP04WBP-BK94_2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/HVIN-SUMVP04WBP-BK94_3.jpg</picture>
+				<param name="Англійське найменування">47 Brand CHICAGO BLACKHAWKS SURE SHOT</param>
+				<param name="Бренд">47 Brand</param>
+				<param name="Колір">чорний, червоний</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">OSFA</param>
+				<param name="Склад">85% акрил, 15% бавовна</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+		
+			<offer id="00000023563" available="true">
+				<categoryId>00000017630</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Кепка 47 Brand DP ANGELES DODGERS синій, сірий Уні OSFA</name>
+				<price>1250</price>
+				<stock_quantity>2</stock_quantity>
+				<description>Оптимальний вибір для активного відпочинку та повсякденного носіння.
+Високоякісний матеріал забезпечує максимальний комфорт.
+Козирьок забезпечує захист від негативного впливу сонячних променів.
+Практичний дизайн доповнить стильний спортивний образ.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Оптимальний вибір для активного відпочинку та повсякденного носіння.&lt;/P&gt;&lt;P&gt;Високоякісний матеріал забезпечує максимальний комфорт.&lt;/P&gt;&lt;P&gt;Козирьок забезпечує захист від негативного впливу сонячних променів.&lt;/P&gt;&lt;P&gt;Практичний дизайн доповнить стильний спортивний образ.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>47 Brand</vendor>
+				<vendorCode>B-REPSP12WBP-RY</vendorCode>
+				<barcode>196895332019</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/B-REPSP12WBP-RY.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/B-REPSP12WBP-RY_2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/47_Brand/B-REPSP12WBP-RY_3.jpg</picture>
+				<param name="Англійське найменування">47 Brand DP ANGELES DODGERS</param>
+				<param name="Бренд">47 Brand</param>
+				<param name="Колір">синій, сірий</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">OSFA</param>
+				<param name="Склад">85% акрил, 15% бавовна</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+		
+			<offer id="00000034930" available="true">
+				<categoryId>00000034929</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Напульсник Adidas TENNIS WB S білий Уні M/L</name>
+				<price>459</price>
+				<stock_quantity>19</stock_quantity>
+				<description>Напульсники для тенісу Small
+Будь на висоті, очко за очком. Ці маленькі тенісні напульсники від adidas допоможуть увібрати вологу і зберегти концентрацію. Їхня м'яка, конструкція та акуратний дизайн означають, що ти помітиш їх лише тоді, коли вони тобі знадобляться. Модель щонайменше на 70% складається із перероблених матеріалів і представляє одне з наших рішень зі скорочення пластикових відходів.
+Рекомендації з прання
+Делікатне машинне прання в холодній воді
+Не прасувати
+Не відбілювати
+Хімічна чистка заборонена
+Про модель
+74% перероблений поліестер, 23% бавовна, 3% еластан
+Вишитий логотип adidas спереду.
+Колір моделі: White / White / Black</description>
+				<description_format>&lt;![CDATA[ &lt;h2&gt;Напульсники для тенісу Small&lt;/h2&gt;&lt;P&gt;Будь на висоті, очко за очком. Ці маленькі тенісні напульсники від adidas допоможуть увібрати вологу і зберегти концентрацію. Їхня м'яка, конструкція та акуратний дизайн означають, що ти помітиш їх лише тоді, коли вони тобі знадобляться. Модель щонайменше на 70% складається із перероблених матеріалів і представляє одне з наших рішень зі скорочення пластикових відходів.&lt;/P&gt;&lt;P&gt;&lt;strong&gt;Рекомендації з прання&lt;/strong&gt;&lt;/P&gt;&lt;ul&gt;&lt;li&gt;Делікатне машинне прання в холодній воді&lt;/li&gt;&lt;li&gt;Не прасувати&lt;/li&gt;&lt;li&gt;Не відбілювати&lt;/li&gt;&lt;li&gt;Хімічна чистка заборонена&lt;/li&gt;&lt;/ul&gt;&lt;P&gt;&lt;strong&gt;Про модель&lt;/strong&gt;&lt;/P&gt;&lt;ul&gt;&lt;li&gt;74% перероблений поліестер, 23% бавовна, 3% еластан&lt;/li&gt;&lt;li&gt;Вишитий логотип adidas спереду.&lt;/li&gt;&lt;li&gt;Колір моделі: White / White / Black&lt;/li&gt;&lt;/ul&gt;  ]]&gt;</description_format>
+				<vendor>ADIDAS</vendor>
+				<vendorCode>HT3910</vendorCode>
+				<barcode>4066751255935</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/HT3910.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/HT3910_2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/HT3910_3.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/HT3910_4.jpg</picture>
+				<param name="Англійське найменування">Adidas TENNIS WB S</param>
+				<param name="Бренд">ADIDAS</param>
+				<param name="Колір">білий</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">M/L</param>
+				<param name="Склад">74% перероблений поліестер, 23% бавовна, 3% еластан</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000037585" available="true">
+				<categoryId>00000035197</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Шльопанці Adidas ADILETTE AQUA темно-синій Уні 40 2/3 (7UK) 25 см</name>
+				<price>1099</price>
+				<stock_quantity>2</stock_quantity>
+				<description>Шльопанці Adilette Aqua
+Шльопанці з м'якою підошвою для відпочинку після басейну. Зручні капці для душу. Лаконічна гладка модель з трьома смужками в тон. М'яка підошва дарує комфорт втомленим ступням.
+Про модель
+Конструкція сліпонів
+Легка модель; швидковисихаючий матеріал
+М'яка устілка Cloudfoam
+Підошва із ЕВА
+Стандартна колодка
+Цілісний литий верх з ЕВА</description>
+				<description_format>&lt;![CDATA[ &lt;h2&gt;Шльопанці&amp;nbsp;Adilette Aqua&lt;/h2&gt;&lt;P&gt;Шльопанці з м'якою підошвою для відпочинку після басейну.&amp;nbsp;Зручні капці для душу. Лаконічна гладка модель з трьома смужками в тон. М'яка підошва дарує комфорт втомленим ступням.&lt;/P&gt;&lt;P&gt;&lt;strong&gt;Про модель&lt;/strong&gt;&lt;/P&gt;&lt;ul&gt;&lt;li&gt;Конструкція сліпонів&lt;/li&gt;&lt;li&gt;Легка модель; швидковисихаючий матеріал&lt;/li&gt;&lt;li&gt;М'яка устілка Cloudfoam&lt;/li&gt;&lt;li&gt;Підошва із ЕВА&lt;/li&gt;&lt;li&gt;Стандартна колодка&lt;/li&gt;&lt;li&gt;Цілісний литий верх з ЕВА&lt;/li&gt;&lt;/ul&gt;  ]]&gt;</description_format>
+				<vendor>ADIDAS</vendor>
+				<vendorCode>F35542</vendorCode>
+				<barcode>4060509397304</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_10.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_3.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_4.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_5.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_6.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_7.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_8.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_9.jpg</picture>
+				<param name="Англійське найменування">Adidas ADILETTE AQUA</param>
+				<param name="Бренд">ADIDAS</param>
+				<param name="Колір">темно-синій</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">40 2/3 (7UK) 25 см</param>
+				<param name="Склад">ЕВА</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000037586" available="true">
+				<categoryId>00000035197</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Шльопанці Adidas ADILETTE AQUA темно-синій Уні 42 (8UK) 25.9 см</name>
+				<price>1099</price>
+				<stock_quantity>3</stock_quantity>
+				<description>Шльопанці Adilette Aqua
+Шльопанці з м'якою підошвою для відпочинку після басейну. Зручні капці для душу. Лаконічна гладка модель з трьома смужками в тон. М'яка підошва дарує комфорт втомленим ступням.
+Про модель
+Конструкція сліпонів
+Легка модель; швидковисихаючий матеріал
+М'яка устілка Cloudfoam
+Підошва із ЕВА
+Стандартна колодка
+Цілісний литий верх з ЕВА</description>
+				<description_format>&lt;![CDATA[ &lt;h2&gt;Шльопанці&amp;nbsp;Adilette Aqua&lt;/h2&gt;&lt;P&gt;Шльопанці з м'якою підошвою для відпочинку після басейну.&amp;nbsp;Зручні капці для душу. Лаконічна гладка модель з трьома смужками в тон. М'яка підошва дарує комфорт втомленим ступням.&lt;/P&gt;&lt;P&gt;&lt;strong&gt;Про модель&lt;/strong&gt;&lt;/P&gt;&lt;ul&gt;&lt;li&gt;Конструкція сліпонів&lt;/li&gt;&lt;li&gt;Легка модель; швидковисихаючий матеріал&lt;/li&gt;&lt;li&gt;М'яка устілка Cloudfoam&lt;/li&gt;&lt;li&gt;Підошва із ЕВА&lt;/li&gt;&lt;li&gt;Стандартна колодка&lt;/li&gt;&lt;li&gt;Цілісний литий верх з ЕВА&lt;/li&gt;&lt;/ul&gt;  ]]&gt;</description_format>
+				<vendor>ADIDAS</vendor>
+				<vendorCode>F35542</vendorCode>
+				<barcode>4060509397236</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_10.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_3.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_4.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_5.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_6.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_7.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_8.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_9.jpg</picture>
+				<param name="Англійське найменування">Adidas ADILETTE AQUA</param>
+				<param name="Бренд">ADIDAS</param>
+				<param name="Колір">темно-синій</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">42 (8UK) 25.9 см</param>
+				<param name="Склад">ЕВА</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000037587" available="true">
+				<categoryId>00000035197</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Шльопанці Adidas ADILETTE AQUA темно-синій Уні 43 1/3 (9UK) 26.7 см</name>
+				<price>1099</price>
+				<stock_quantity>4</stock_quantity>
+				<description>Шльопанці Adilette Aqua
+Шльопанці з м'якою підошвою для відпочинку після басейну. Зручні капці для душу. Лаконічна гладка модель з трьома смужками в тон. М'яка підошва дарує комфорт втомленим ступням.
+Про модель
+Конструкція сліпонів
+Легка модель; швидковисихаючий матеріал
+М'яка устілка Cloudfoam
+Підошва із ЕВА
+Стандартна колодка
+Цілісний литий верх з ЕВА</description>
+				<description_format>&lt;![CDATA[ &lt;h2&gt;Шльопанці&amp;nbsp;Adilette Aqua&lt;/h2&gt;&lt;P&gt;Шльопанці з м'якою підошвою для відпочинку після басейну.&amp;nbsp;Зручні капці для душу. Лаконічна гладка модель з трьома смужками в тон. М'яка підошва дарує комфорт втомленим ступням.&lt;/P&gt;&lt;P&gt;&lt;strong&gt;Про модель&lt;/strong&gt;&lt;/P&gt;&lt;ul&gt;&lt;li&gt;Конструкція сліпонів&lt;/li&gt;&lt;li&gt;Легка модель; швидковисихаючий матеріал&lt;/li&gt;&lt;li&gt;М'яка устілка Cloudfoam&lt;/li&gt;&lt;li&gt;Підошва із ЕВА&lt;/li&gt;&lt;li&gt;Стандартна колодка&lt;/li&gt;&lt;li&gt;Цілісний литий верх з ЕВА&lt;/li&gt;&lt;/ul&gt;  ]]&gt;</description_format>
+				<vendor>ADIDAS</vendor>
+				<vendorCode>F35542</vendorCode>
+				<barcode>4060509397229</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_10.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_3.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_4.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_5.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_6.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_7.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_8.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_9.jpg</picture>
+				<param name="Англійське найменування">Adidas ADILETTE AQUA</param>
+				<param name="Бренд">ADIDAS</param>
+				<param name="Колір">темно-синій</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">43 1/3 (9UK) 26.7 см</param>
+				<param name="Склад">ЕВА</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000037588" available="true">
+				<categoryId>00000035197</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Шльопанці Adidas ADILETTE AQUA темно-синій Уні 44 2/3 (10UK) 27.6 см</name>
+				<price>1099</price>
+				<stock_quantity>4</stock_quantity>
+				<description>Шльопанці Adilette Aqua
+Шльопанці з м'якою підошвою для відпочинку після басейну. Зручні капці для душу. Лаконічна гладка модель з трьома смужками в тон. М'яка підошва дарує комфорт втомленим ступням.
+Про модель
+Конструкція сліпонів
+Легка модель; швидковисихаючий матеріал
+М'яка устілка Cloudfoam
+Підошва із ЕВА
+Стандартна колодка
+Цілісний литий верх з ЕВА</description>
+				<description_format>&lt;![CDATA[ &lt;h2&gt;Шльопанці&amp;nbsp;Adilette Aqua&lt;/h2&gt;&lt;P&gt;Шльопанці з м'якою підошвою для відпочинку після басейну.&amp;nbsp;Зручні капці для душу. Лаконічна гладка модель з трьома смужками в тон. М'яка підошва дарує комфорт втомленим ступням.&lt;/P&gt;&lt;P&gt;&lt;strong&gt;Про модель&lt;/strong&gt;&lt;/P&gt;&lt;ul&gt;&lt;li&gt;Конструкція сліпонів&lt;/li&gt;&lt;li&gt;Легка модель; швидковисихаючий матеріал&lt;/li&gt;&lt;li&gt;М'яка устілка Cloudfoam&lt;/li&gt;&lt;li&gt;Підошва із ЕВА&lt;/li&gt;&lt;li&gt;Стандартна колодка&lt;/li&gt;&lt;li&gt;Цілісний литий верх з ЕВА&lt;/li&gt;&lt;/ul&gt;  ]]&gt;</description_format>
+				<vendor>ADIDAS</vendor>
+				<vendorCode>F35542</vendorCode>
+				<barcode>4060509397250</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_10.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_3.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_4.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_5.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_6.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_7.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_8.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/Adidas_Reebok/F35542_9.jpg</picture>
+				<param name="Англійське найменування">Adidas ADILETTE AQUA</param>
+				<param name="Бренд">ADIDAS</param>
+				<param name="Колір">темно-синій</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">44 2/3 (10UK) 27.6 см</param>
+				<param name="Склад">ЕВА</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000033517" available="true">
+				<categoryId>00000019505</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Купальник закритий для жінок Arena BREATH SWIMSUIT V BACK LB синій, чорний, бірюзовий Жін 36</name>
+				<price>2560</price>
+				<stock_quantity>1</stock_quantity>
+				<description>Купальник жіночий Arena BREATH SWIMSUIT V BACK LB (008330-580)
+Жіночий купальник Arena Breath відмінний вибір для активних жінок, які цінують комфорт під час плавання. Цей стильний і зручний одяг забезпечує ідеальну посадку, забезпечуючи свободу рухів. Виготовлений з високоякісних матеріалів, гарантує довговічність і комфорт носіння. Завдяки класичному дизайну цей купальник неодмінно виділить вас у басейні. Підкресліть свій стиль і впевненість у собі!
+Найбільші переваги
+Тканина MaxFit Eco - тканина, яка є спадкоємицею 4-сторонньої стрейч тканини, характерної для Arena. Створений для максимальної свободи рухів завдяки чудовій гнучкості. Виготовлений із промислових відходів і пряжі, він зберігає ті самі відомі переваги та матовий вигляд, що й оригінальні волокна, включаючи підвищену стійкість до сколювання та стирання та захист від ультрафіолетового випромінювання 50+
+Екологічні - виготовлені з вторинної переробки для захисту навколишнього середовища
+Універсальний - для оздоровчого та змагального плавання
+Ідеальна посадка - крій вбрання забезпечує комфортну посадку та вільний рух.
+Високоякісні матеріали - стійкі до хлору та солоної води, дуже міцні
+Оригінальний дизайн
+Класичний бюстгальтер - підкладка та додатковий, еластичний матеріал під грудьми
+Специфікація та виконання
+матеріал: MaxFit Eco
+склад: 80% перероблений поліамід 20% еластан
+колір: чорний
+призначення: для жінок
+Чому варто мати?
+Універсальний
+Купальник виправдає ваші очікування як під час інтенсивних тренувань у басейні, так і під час ігор у воді та відпочинку у відкритих водоймах.
+Комфорт і довговічність
+Костюм забезпечує повну свободу рухів і безмежне задоволення у воді
+Безпека
+Одяг м'який і делікатний, захищає від шкідливих УФ-променів, не натирає, надзвичайно гнучкий і міцний</description>
+				<description_format>&lt;![CDATA[ &lt;h2&gt;Купальник жіночий Arena BREATH SWIMSUIT V BACK LB (008330-580)&lt;/h2&gt;&lt;P&gt;&lt;strong&gt;Жіночий купальник Arena Breath&amp;nbsp;&lt;/strong&gt;відмінний вибір для активних жінок, які цінують комфорт під час плавання. Цей стильний і зручний одяг забезпечує ідеальну посадку, забезпечуючи свободу рухів. Виготовлений з високоякісних матеріалів, гарантує довговічність і комфорт носіння. Завдяки класичному дизайну цей купальник неодмінно виділить вас у басейні. Підкресліть свій стиль і впевненість у собі!&lt;/P&gt;&lt;P&gt;&lt;strong&gt;Найбільші переваги&lt;/strong&gt;&lt;/P&gt;&lt;ul&gt;&lt;li&gt;Тканина MaxFit Eco - тканина, яка є спадкоємицею 4-сторонньої стрейч тканини, характерної для Arena. Створений для максимальної свободи рухів завдяки чудовій гнучкості. Виготовлений із промислових відходів і пряжі, він зберігає ті самі відомі переваги та матовий вигляд, що й оригінальні волокна, включаючи підвищену стійкість до сколювання та стирання та захист від ультрафіолетового випромінювання 50+&lt;/li&gt;&lt;li&gt;Екологічні - виготовлені з вторинної переробки для захисту навколишнього середовища&lt;/li&gt;&lt;li&gt;Універсальний - для оздоровчого та змагального плавання&lt;/li&gt;&lt;li&gt;Ідеальна посадка - крій вбрання забезпечує комфортну посадку та вільний рух.&lt;/li&gt;&lt;li&gt;Високоякісні матеріали - стійкі до хлору та солоної води, дуже міцні&lt;/li&gt;&lt;li&gt;Оригінальний дизайн&lt;/li&gt;&lt;li&gt;Класичний бюстгальтер - підкладка та додатковий, еластичний матеріал під грудьми&lt;/li&gt;&lt;/ul&gt;&lt;P&gt;&lt;strong&gt;Специфікація та виконання&lt;/strong&gt;&lt;/P&gt;&lt;ul&gt;&lt;li&gt;матеріал: MaxFit Eco&lt;/li&gt;&lt;li&gt;склад: 80% перероблений поліамід 20% еластан&lt;/li&gt;&lt;li&gt;колір: чорний&lt;/li&gt;&lt;li&gt;призначення: для жінок&lt;/li&gt;&lt;/ul&gt;&lt;P&gt;&lt;strong&gt;Чому варто мати?&lt;/strong&gt;&lt;/P&gt;&lt;ul&gt;&lt;li&gt;Універсальний&lt;/li&gt;&lt;li&gt;Купальник виправдає ваші очікування як під час інтенсивних тренувань у басейні, так і під час ігор у воді та відпочинку у відкритих водоймах.&lt;/li&gt;&lt;li&gt;Комфорт і довговічність&lt;/li&gt;&lt;li&gt;Костюм забезпечує повну свободу рухів і безмежне задоволення у воді&lt;/li&gt;&lt;li&gt;Безпека&lt;/li&gt;&lt;li&gt;Одяг м'який і делікатний, захищає від шкідливих УФ-променів, не натирає, надзвичайно гнучкий і міцний&lt;/li&gt;&lt;/ul&gt;  ]]&gt;</description_format>
+				<vendor>Arena</vendor>
+				<vendorCode>008330-580</vendorCode>
+				<barcode>3468337421962</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/ARENA/Clothing_footwear/008330-580.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/ARENA/Clothing_footwear/008330-580_2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/ARENA/Clothing_footwear/008330-580_3.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/ARENA/Clothing_footwear/008330-580_4.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/ARENA/Clothing_footwear/008330-580_5.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/ARENA/Clothing_footwear/008330-580_6.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/ARENA/Clothing_footwear/008330-580_7.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/ARENA/Clothing_footwear/008330-580_8.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/ARENA/Clothing_footwear/008330-580_9.jpg</picture>
+				<param name="Англійське найменування">Arena BREATH SWIMSUIT V BACK LB</param>
+				<param name="Бренд">Arena</param>
+				<param name="Колір">синій, чорний, бірюзовий</param>
+				<param name="Призначення">Плавання</param>
+				<param name="Розмір постачальника">36</param>
+				<param name="Склад">80% поліамід, 20% еластан</param>
+				<param name="Стать">Жінки</param>
+			</offer>
+			<offer id="00000029746" available="true">
+				<categoryId>00000013895</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Пляшка Nike REFUEL BOTTLE 24 OZ білий, чорний Уні 709 мл</name>
+				<price>714</price>
+				<stock_quantity>8</stock_quantity>
+				<description>Завдяки вдосконаленому ергономічному дизайну та ковпачку, який легко відкручується, пляшка NIKE REFUEL BOTTLE є необхідним аксесуаром, який допоможе вам залишатися зволоженим.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Завдяки вдосконаленому ергономічному дизайну та ковпачку, який легко відкручується, пляшка NIKE REFUEL BOTTLE є необхідним аксесуаром, який допоможе вам залишатися зволоженим.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>NIKE</vendor>
+				<vendorCode>N.100.7666.125.24</vendorCode>
+				<barcode>887791745200</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/NIKE/Bottles/N.100.7666.125.24.jpg</picture>
+				<param name="Англійське найменування">Nike REFUEL BOTTLE 24 OZ</param>
+				<param name="Бренд">NIKE</param>
+				<param name="Колір">білий, чорний</param>
+				<param name="Призначення">Спортивний стиль</param>
+				<param name="Розмір постачальника">709 мл</param>
+				<param name="Склад">76,08% поліетилен низької щільності, 22,76% поліпропілен, 1,16% силікон</param>
+				<param name="Стать">Унісекс</param>
+			</offer>
+			<offer id="00000010663" available="true">
+				<categoryId>00000035865</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Шкарпетки STAR WARS STORMTROOPER червоний Діт 31-34, арт. 83892148-5</name>
+				<price>66</price>
+				<stock_quantity>9</stock_quantity>
+				<description>Мультяшні шкарпетки з принтом STAR WARS гарантують, що ваш зовнішній вигляд стане чимось особливим і оригінальним. Веселий аксесуар доступний у дитячих розмірах. Добре пропускають повітря. Ідеальні для повсякденного носіння. Прекрасно виконують гігієнічну функцію, захищаючи шкіру ніг від натирань взуттям, ідеально облягають ніжку та дарують комфортне відчуття. У пачці 1 пара шкарпеток.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Мультяшні шкарпетки з принтом STAR WARS гарантують, що ваш зовнішній вигляд стане чимось особливим і оригінальним. Веселий аксесуар доступний у дитячих розмірах. Добре пропускають повітря. Ідеальні для повсякденного носіння. Прекрасно виконують гігієнічну функцію, захищаючи шкіру ніг від натирань взуттям, ідеально облягають ніжку та дарують комфортне відчуття. У пачці 1 пара шкарпеток.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>STAR WARS</vendor>
+				<vendorCode>83892148-5</vendorCode>
+				<barcode>3349610007953</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/License_CARTOON_CLUB_HELLOKITY_etc/STAR WARS/83892148-5.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/License_CARTOON_CLUB_HELLOKITY_etc/STAR WARS/83892148-5_2.jpg</picture>
+				<param name="Англійське найменування">STAR WARS STORMTROOPER</param>
+				<param name="Бренд">STAR WARS</param>
+				<param name="Колір">червоний</param>
+				<param name="Розмір постачальника">31-34</param>
+				<param name="Склад">68% поліестер, 32% бавовна</param>
+			</offer>
+			<offer id="00000010654" available="true">
+				<categoryId>00000035865</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Шкарпетки STAR WARS ВВ8 чорний Діт 31-34, арт.83892148-2</name>
+				<price>66</price>
+				<stock_quantity>27</stock_quantity>
+				<description>Мультяшні шкарпетки з принтом STAR WARS гарантують, що ваш зовнішній вигляд стане чимось особливим і оригінальним. Веселий аксесуар доступний у дитячих розмірах. Добре пропускають повітря. Ідеальні для повсякденного носіння. Прекрасно виконують гігієнічну функцію, захищаючи шкіру ніг від натирань взуттям, ідеально облягають ніжку та дарують комфортне відчуття. У пачці 1 пара шкарпеток.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Мультяшні шкарпетки з принтом STAR WARS гарантують, що ваш зовнішній вигляд стане чимось особливим і оригінальним. Веселий аксесуар доступний у дитячих розмірах. Добре пропускають повітря. Ідеальні для повсякденного носіння. Прекрасно виконують гігієнічну функцію, захищаючи шкіру ніг від натирань взуттям, ідеально облягають ніжку та дарують комфортне відчуття. У пачці 1 пара шкарпеток.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>STAR WARS</vendor>
+				<vendorCode>83892148-2</vendorCode>
+				<barcode>3349610007861</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/License_CARTOON_CLUB_HELLOKITY_etc/STAR WARS/83892148-2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/License_CARTOON_CLUB_HELLOKITY_etc/STAR WARS/83892148-2_2.jpg</picture>
+				<param name="Англійське найменування">STAR WARS ВВ8</param>
+				<param name="Бренд">STAR WARS</param>
+				<param name="Колір">чорний</param>
+				<param name="Розмір постачальника">31-34</param>
+				<param name="Склад">68% поліестер, 32% бавовна</param>
+			</offer>
+			<offer id="00000010655" available="true">
+				<categoryId>00000035865</categoryId>
+				<currencyId>UAH</currencyId>
+				<name>Шкарпетки STAR WARS ВВ8 чорний Діт 35-38, арт.83892148-2</name>
+				<price>66</price>
+				<stock_quantity>2</stock_quantity>
+				<description>Мультяшні шкарпетки з принтом STAR WARS гарантують, що ваш зовнішній вигляд стане чимось особливим і оригінальним. Веселий аксесуар доступний у дитячих розмірах. Добре пропускають повітря. Ідеальні для повсякденного носіння. Прекрасно виконують гігієнічну функцію, захищаючи шкіру ніг від натирань взуттям, ідеально облягають ніжку та дарують комфортне відчуття. У пачці 1 пара шкарпеток.</description>
+				<description_format>&lt;![CDATA[ &lt;P&gt;Мультяшні шкарпетки з принтом STAR WARS гарантують, що ваш зовнішній вигляд стане чимось особливим і оригінальним. Веселий аксесуар доступний у дитячих розмірах. Добре пропускають повітря. Ідеальні для повсякденного носіння. Прекрасно виконують гігієнічну функцію, захищаючи шкіру ніг від натирань взуттям, ідеально облягають ніжку та дарують комфортне відчуття. У пачці 1 пара шкарпеток.&lt;/P&gt;  ]]&gt;</description_format>
+				<vendor>STAR WARS</vendor>
+				<vendorCode>83892148-2</vendorCode>
+				<barcode>3349610007878</barcode>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/License_CARTOON_CLUB_HELLOKITY_etc/STAR WARS/83892148-2.jpg</picture>
+				<picture>http://dc.ditek.kiev.ua:1820/price_lists_and_catalogs/PHOTOS_by_brands/License_CARTOON_CLUB_HELLOKITY_etc/STAR WARS/83892148-2_2.jpg</picture>
+				<param name="Англійське найменування">STAR WARS ВВ8</param>
+				<param name="Бренд">STAR WARS</param>
+				<param name="Колір">чорний</param>
+				<param name="Розмір постачальника">35-38</param>
+				<param name="Склад">68% поліестер, 32% бавовна</param>
+			</offer>
+		</offers>
+	</shop>
+</yml_catalog>
