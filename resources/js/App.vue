@@ -28,6 +28,30 @@
             <div v-if="importData.status === 'failed'" class="text-red-700 mt-2 font-bold">Ошибка: {{ importData.error }}</div>
         </div>
     </div>
+    <div v-if="products.length > 0" class="mt-6">
+        <h2 class="text-xl font-semibold mb-2">Товары ({{ products.length }})</h2>
+        <table class="table-auto w-full border text-sm">
+            <thead>
+            <tr class="bg-gray-200">
+                <th class="border px-2 py-1">ID</th>
+                <th class="border px-2 py-1">Название</th>
+                <th class="border px-2 py-1">Цена</th>
+                <th class="border px-2 py-1">Категория</th>
+                <th class="border px-2 py-1">Вендор</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="product in products" :key="product.id">
+                <td class="border px-2 py-1">{{ product.id }}</td>
+                <td class="border px-2 py-1">{{ product.name }}</td>
+                <td class="border px-2 py-1">{{ product.price }}</td>
+                <td class="border px-2 py-1">{{ product.category_id }}</td>
+                <td class="border px-2 py-1">{{ product.vendor }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
 </template>
 
 <script setup>
@@ -37,6 +61,7 @@ import axios from 'axios'
 const url = ref('')
 const importId = ref(null)
 const importData = ref(null)
+const products = ref([])
 const loading = ref(false)
 let interval = null
 
@@ -60,12 +85,22 @@ const fetchProgress = async () => {
         const res = await axios.get(`/api/imports/${importId.value}`)
         importData.value = res.data
 
-        if (['completed', 'failed'].includes(res.data.status)) {
+        if (['completed'].includes(res.data.status)) {
             clearInterval(interval)
+            fetchProducts()
         }
     } catch (err) {
         clearInterval(interval)
         alert('Ошибка при получении статуса')
+    }
+}
+
+const fetchProducts = async () => {
+    try {
+        const res = await axios.get(`/api/imports/${importId.value}/products`)
+        products.value = res.data
+    } catch (err) {
+        alert('Ошибка загрузки товаров')
     }
 }
 

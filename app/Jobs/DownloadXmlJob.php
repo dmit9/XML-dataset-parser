@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\Middleware\ThrottlesExceptions;
-use Throwable;
 use GuzzleHttp\Client;
+use Throwable;
 use Illuminate\Foundation\Bus\Dispatchable;
+use App\Jobs\ParseXmlJob;
 
 class DownloadXmlJob implements ShouldQueue
 {
@@ -25,27 +25,23 @@ class DownloadXmlJob implements ShouldQueue
         $this->importId = $importId;
     }
 
-    public function middleware(): array
-    {
-        return [new ThrottlesExceptions(5, 60)];
-    }
-
     public function handle(): void
     {
-        $import = Import::findOrFail($this->importId);
+        Log::info(">>> START DownloadXmlJob for import #{$this->importId}");
 
+        $import = Import::findOrFail($this->importId);
         $client = new Client();
         $offset = $import->downloaded_bytes ?? 0;
 
-        $pathTmp = storage_path("app/imports/{$import->id}.xml.tmp");
+        $url = $import->url;
+        $tmpPath = storage_path("app/imports/{$import->id}.xml.tmp");
+        $finalPath = storage_path("app/imports/{$import->id}.xml");
 
-        if (!Storage::exists("imports")) {
-            Storage::makeDirectory("imports");
-        }
+        Log::info("Загружаем файл по адресу: $url");
 
         $headers = $offset > 0 ? ['Range' => "bytes={$offset}-"] : [];
 
-        $response = $client->request('GET', $import->url, [
+        $response = $client->request('GET', $url, [
             'stream' => true,
             'headers' => $headers,
             'timeout' => 60,
@@ -54,32 +50,37 @@ class DownloadXmlJob implements ShouldQueue
         $total = $import->total_bytes ?? $this->getTotalSize($response, $offset);
         $import->update(['total_bytes' => $total]);
 
-        $file = fopen($pathTmp, $offset > 0 ? 'ab' : 'wb');
+        $fh = fopen($tmpPath, $offset ? 'ab' : 'wb');
         $body = $response->getBody();
 
-        $bytesWritten = 0;
         while (!$body->eof()) {
             $chunk = $body->read(1024 * 512); // 512 KB
-            $bytes = fwrite($file, $chunk);
-            $bytesWritten += $bytes;
-
-            $import->increment('downloaded_bytes', $bytes);
+            fwrite($fh, $chunk);
+            $import->increment('downloaded_bytes', strlen($chunk));
         }
 
-        fclose($file);
+        fclose($fh);
 
-        if ($import->downloaded_bytes < $import->total_bytes) {
-            throw new \RuntimeException("Incomplete download (got {$import->downloaded_bytes} of {$import->total_bytes})");
+        Log::info(">>> Загрузка завершена. Перемещаем tmp → xml");
+
+        if (!file_exists($tmpPath)) {
+            throw new \RuntimeException("Файл не найден: $tmpPath");
         }
 
-        // Переносим в .xml
-        Storage::move("imports/{$import->id}.xml.tmp", "imports/{$import->id}.xml");
+        rename($tmpPath, $finalPath);
+
+        if (!file_exists($finalPath)) {
+            throw new \RuntimeException("Файл не переместился: $finalPath");
+        }
+
+        Log::info(">>> Файл успешно перемещён: $finalPath");
 
         $import->update([
             'status' => 'parsing',
             'started_at' => now(),
         ]);
 
+        Log::info(">>> Отправляем ParseXmlJob");
         ParseXmlJob::dispatch($import->id);
     }
 
@@ -96,7 +97,7 @@ class DownloadXmlJob implements ShouldQueue
 
     public function failed(Throwable $e): void
     {
-        Log::error("DownloadXmlJob failed: {$e->getMessage()}");
+        Log::error("DownloadXmlJob failed: " . $e->getMessage());
         Import::where('id', $this->importId)->update([
             'status' => 'failed',
             'error' => $e->getMessage(),
