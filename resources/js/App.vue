@@ -1,111 +1,247 @@
 <template>
-    <div class="container mx-auto p-4 max-w-xl">
-        <h1 class="text-2xl font-bold mb-4">Импорт XML-файла</h1>
+    <div class="app">
+        <h1>Импорт товаров</h1>
 
-        <div class="mb-4">
-            <label class="block font-semibold mb-1">Ссылка на XML-файл:</label>
-            <input v-model="url" type="text" class="w-full border px-3 py-2" placeholder="https://example.com/data.xml" />
+        <!-- Импорт XML -->
+        <form @submit.prevent="startImport" class="import-form">
+            <input v-model="importUrl" placeholder="URL XML-файла" />
+            <button :disabled="isImporting">Загрузить</button>
+        </form>
+
+        <!-- Прогресс -->
+        <div v-if="isImporting" class="progress-bar">
+            <p>Статус: {{ importStatus }}</p>
+            <progress :value="downloadedBytes" :max="totalBytes"></progress>
+            <p>{{ percentDownloaded }} % ({{ downloadedBytes }} / {{ totalBytes }} байт)</p>
         </div>
 
-        <button
-            @click="startImport"
-            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            :disabled="loading || !url"
-        >
-            Загрузить
-        </button>
+        <div v-if="filters.length || products.length" class="catalog">
+            <aside class="filters">
+                <h2>Фильтры</h2>
+                <div v-for="filter in filters" :key="filter.slug" class="filter-block">
+                    <label :for="'filter-' + filter.slug">{{ filter.name }}</label>
+                    <select
+                        :id="'filter-' + filter.slug"
+                        multiple
+                        :value="filterState[filter.slug] || []"
+                        @change="onMultiSelectChange($event, filter.slug)"
+                        class="filter-select"
+                    >
+                        <option value="">Выбрать все</option>
+                        <option
+                            v-for="val in filter.values"
+                            :key="val.value"
+                            :value="val.value"
+                        >
+                            {{ val.value }} ({{ val.count }}) {{ val.active ? '✓' : '' }}
+                        </option>
+                    </select>
+                </div>
 
-        <div v-if="importData" class="mt-6">
-            <p class="font-semibold">Статус: <span class="font-mono">{{ importData.status }}</span></p>
-            <div v-if="importData.total_bytes">
-                <progress :value="importData.downloaded_bytes" :max="importData.total_bytes" class="w-full mt-2"></progress>
-                <p>{{ Math.floor(progressPercent) }} % ({{ importData.downloaded_bytes }} / {{ importData.total_bytes }} байт)</p>
-            </div>
-            <div v-if="importData.status === 'parsing'">
-                <p class="mt-2">Обработано товаров: {{ importData.parsed_offers }}</p>
-            </div>
-            <div v-if="importData.status === 'completed'" class="text-green-700 mt-2 font-bold">Импорт завершён!</div>
-            <div v-if="importData.status === 'failed'" class="text-red-700 mt-2 font-bold">Ошибка: {{ importData.error }}</div>
+                <button @click="resetFilters" class="reset-btn">Сбросить фильтры</button>
+            </aside>
+
+            <main class="main">
+                <div class="sort">
+                    <label>Сортировка:</label>
+                    <select v-model="sortBy" @change="fetchProducts">
+                        <option value="">По умолчанию</option>
+                        <option value="price_asc">Цена ↑</option>
+                        <option value="price_desc">Цена ↓</option>
+                    </select>
+                </div>
+
+                <ul class="product-list">
+                    <li v-for="p in products" :key="p.id" class="product">
+                        <h3>{{ p.name }}</h3>
+                        <strong>{{ p.price }} грн</strong>
+                        <p>{{ p.description }}</p>
+                    </li>
+                </ul>
+
+                <div class="pagination">
+                    <button @click="changePage(currentPage - 1)" :disabled="currentPage <= 1">←</button>
+                    <span>Стр. {{ currentPage }} / {{ lastPage }}</span>
+                    <button @click="changePage(currentPage + 1)" :disabled="currentPage >= lastPage">→</button>
+                </div>
+            </main>
         </div>
     </div>
-    <div v-if="products.length > 0" class="mt-6">
-        <h2 class="text-xl font-semibold mb-2">Товары ({{ products.length }})</h2>
-        <table class="table-auto w-full border text-sm">
-            <thead>
-            <tr class="bg-gray-200">
-                <th class="border px-2 py-1">ID</th>
-                <th class="border px-2 py-1">Название</th>
-                <th class="border px-2 py-1">Цена</th>
-                <th class="border px-2 py-1">Категория</th>
-                <th class="border px-2 py-1">Вендор</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr v-for="product in products" :key="product.id">
-                <td class="border px-2 py-1">{{ product.id }}</td>
-                <td class="border px-2 py-1">{{ product.name }}</td>
-                <td class="border px-2 py-1">{{ product.price }}</td>
-                <td class="border px-2 py-1">{{ product.category_id }}</td>
-                <td class="border px-2 py-1">{{ product.vendor }}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, onMounted,computed } from 'vue'
 import axios from 'axios'
 
-const url = ref('')
-const importId = ref(null)
-const importData = ref(null)
+const importUrl = ref('')
+const isImporting = ref(false)
+const importStatus = ref('')
+const downloadedBytes = ref(0)
+const totalBytes = ref(0)
+
 const products = ref([])
-const loading = ref(false)
-let interval = null
+const filters = ref([])
+const filterState = ref({})
+const sortBy = ref('')
+const currentPage = ref(1)
+const lastPage = ref(1)
+const perPage = 10
 
-const startImport = async () => {
-    loading.value = true
-    try {
-        const res = await axios.post('/api/imports', { url: url.value })
-        importId.value = res.data.id
-        fetchProgress()
-        interval = setInterval(fetchProgress, 2000)
-    } catch (err) {
-        alert('Ошибка запуска импорта')
-    } finally {
-        loading.value = false
-    }
-}
-
-const fetchProgress = async () => {
-    if (!importId.value) return
-    try {
-        const res = await axios.get(`/api/imports/${importId.value}`)
-        importData.value = res.data
-
-        if (['completed'].includes(res.data.status)) {
-            clearInterval(interval)
-            fetchProducts()
-        }
-    } catch (err) {
-        clearInterval(interval)
-        alert('Ошибка при получении статуса')
-    }
-}
-
-const fetchProducts = async () => {
-    try {
-        const res = await axios.get(`/api/imports/${importId.value}/products`)
-        products.value = res.data
-    } catch (err) {
-        alert('Ошибка загрузки товаров')
-    }
-}
-
-const progressPercent = computed(() => {
-    if (!importData.value || !importData.value.total_bytes) return 0
-    return (importData.value.downloaded_bytes / importData.value.total_bytes) * 100
+const percentDownloaded = computed(() => {
+    if (!totalBytes.value) return 0
+    return ((downloadedBytes.value / totalBytes.value) * 100).toFixed(1)
 })
+
+onMounted(() => {
+    fetchFilters()
+    fetchProducts()
+})
+
+function startImport() {
+    isImporting.value = true
+    importStatus.value = 'pending'
+    downloadedBytes.value = 0
+    totalBytes.value = 0
+
+    axios.post('/api/imports', { url: importUrl.value })
+        .then(res => trackProgress(res.data.id))
+        .catch(err => {
+            console.error(err)
+            isImporting.value = false
+            alert('Ошибка запуска импорта')
+        })
+}
+
+function trackProgress(id) {
+    const interval = setInterval(async () => {
+        try {
+            const res = await axios.get(`/api/imports/${id}`)
+            const data = res.data
+            importStatus.value = data.status
+            downloadedBytes.value = data.downloaded_bytes
+            totalBytes.value = data.total_bytes
+
+            if (data.status === 'completed' || data.status === 'failed') {
+                clearInterval(interval)
+                isImporting.value = false
+                fetchFilters()
+                fetchProducts()
+            }
+        } catch (e) {
+            clearInterval(interval)
+            isImporting.value = false
+            alert('Ошибка отслеживания импорта')
+        }
+    }, 2000)
+}
+
+function fetchProducts() {
+    axios.get('/api/catalog/products', {
+        params: {
+            page: currentPage.value,
+            limit: perPage,
+            sort_by: sortBy.value,
+            filter: filterState.value
+        }
+    }).then(res => {
+        products.value = res.data.data
+        currentPage.value = res.data.meta.current_page
+        lastPage.value = res.data.meta.last_page
+    }).catch(err => {
+        console.error('Ошибка товаров:', err)
+    })
+}
+
+function fetchFilters() {
+    axios.get('/api/catalog/filters', {
+        params: { filter: filterState.value }
+    }).then(res => {
+        filters.value = res.data
+    }).catch(err => {
+        console.error('Ошибка фильтров:', err)
+    })
+}
+
+function onMultiSelectChange(event, slug) {
+    const selected = Array.from(event.target.selectedOptions).map(o => o.value)
+
+    if (selected.includes('')) {
+        // "Выбрать все" — удаляем фильтр
+        delete filterState.value[slug]
+    } else {
+        filterState.value[slug] = selected
+    }
+
+    currentPage.value = 1
+    fetchFilters()
+    fetchProducts()
+}
+
+function resetFilters() {
+    filterState.value = {}
+    currentPage.value = 1
+    fetchFilters()
+    fetchProducts()
+}
+
+function changePage(page) {
+    if (page >= 1 && page <= lastPage.value) {
+        currentPage.value = page
+        fetchProducts()
+    }
+}
 </script>
+
+<style scoped>
+.app {
+    padding: 2rem;
+    font-family: sans-serif;
+}
+.import-form {
+    margin-bottom: 1rem;
+}
+.catalog {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.main {
+    width: 100%;
+}
+.filters {
+    width: 40%;
+}
+.filter-block {
+    margin-bottom: 1rem;
+}
+.sort {
+    margin-bottom: 1rem;
+}
+.product-list {
+    list-style: none;
+    padding: 0;
+}
+.product {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+.pagination {
+    margin-top: 1rem;
+}
+.reset-btn {
+    margin-top: 1rem;
+    background: #eee;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.filter-select {
+    width: 100%;
+    min-height: 90px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+</style>

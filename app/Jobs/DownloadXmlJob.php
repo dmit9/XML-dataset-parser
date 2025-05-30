@@ -80,7 +80,7 @@ class DownloadXmlJob implements ShouldQueue
             'started_at' => now(),
         ]);
 
-        Log::info(">>> Отправляем ParseXmlJob");
+        Log::info("Отправляем ParseXmlJob с importId = {$import->id}");
         ParseXmlJob::dispatch($import->id);
     }
 
