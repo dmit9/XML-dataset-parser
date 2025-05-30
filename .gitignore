@@ -1,23 +1,57 @@
-/.phpunit.cache
-/node_modules
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-/storage/pail
+# Laravel
 /vendor
+/node_modules
+/storage/*.key
+/storage/app/public
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing
+/storage/framework/views/*
+/storage/logs/*
+/public/storage
+/public/hot
+/public/build
 .env
-.env.backup
-.env.production
-.phpactor.json
+.env.*
 .phpunit.result.cache
-Homestead.json
-Homestead.yaml
+.phpunit.cache
+.phpactor.json
+
+# Laravel Octane, Vapor, Sail
+/.vapor
+/docker-compose.override.yml
+sail
+
+# Composer
+/auth.json
+composer.lock
+
+# NPM/Yarn/Pnpm
 npm-debug.log
 yarn-error.log
-/auth.json
-/.fleet
+pnpm-lock.yaml
+
+# PhpStorm & JetBrains IDEs
 /.idea
-/.nova
+/.phpstorm.meta.php
+/.fleet
+
+# VSCode
 /.vscode
+
+# Nova & Zed
+/.nova
 /.zed
+
+# OS & misc
+.DS_Store
+Thumbs.db
+
+# Dump files
+*.sql
+*.sqlite
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
