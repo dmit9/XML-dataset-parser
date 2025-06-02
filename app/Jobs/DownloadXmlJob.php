@@ -4,15 +4,13 @@ namespace App\Jobs;
 
 use App\Models\Import;
 use Illuminate\Bus\Queueable;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Queue\SerializesModels;
-use GuzzleHttp\Client;
-use Throwable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Jobs\ParseXmlJob;
 
 class DownloadXmlJob implements ShouldQueue
 {
@@ -30,77 +28,79 @@ class DownloadXmlJob implements ShouldQueue
         Log::info(">>> START DownloadXmlJob for import #{$this->importId}");
 
         $import = Import::findOrFail($this->importId);
-        $client = new Client();
-        $offset = $import->downloaded_bytes ?? 0;
-
         $url = $import->url;
+
         $tmpPath = storage_path("app/imports/{$import->id}.xml.tmp");
         $finalPath = storage_path("app/imports/{$import->id}.xml");
 
-        Log::info("Загружаем файл по адресу: $url");
+        // Определяем, сколько уже скачано
+        $offset = file_exists($tmpPath) ? filesize($tmpPath) : 0;
 
-        $headers = $offset > 0 ? ['Range' => "bytes={$offset}-"] : [];
+        // Получаем общий размер
+        $totalSize = $this->getTotalSize($url);
+        $import->update(['total_bytes' => $totalSize]);
 
-        $response = $client->request('GET', $url, [
-            'stream' => true,
-            'headers' => $headers,
-            'timeout' => 60,
-        ]);
-
-        $total = $import->total_bytes ?? $this->getTotalSize($response, $offset);
-        $import->update(['total_bytes' => $total]);
+        Log::info("Загружаем файл по адресу: $url (offset=$offset, total=$totalSize)");
 
         $fh = fopen($tmpPath, $offset ? 'ab' : 'wb');
-        $body = $response->getBody();
 
-        while (!$body->eof()) {
-            $chunk = $body->read(1024 * 512); // 512 KB
-            fwrite($fh, $chunk);
-            $import->increment('downloaded_bytes', strlen($chunk));
+        $maxAttempts = 3;
+        $attempt = 0;
+        $downloaded = $offset;
+
+        while ($downloaded < $totalSize && $attempt < $maxAttempts) {
+            try {
+                $response = Http::withHeaders([
+                    'Range' => "bytes={$downloaded}-"
+                ])
+                    ->withOptions(['stream' => true])
+                    ->timeout(30)
+                    ->get($url);
+
+                $body = $response->getBody();
+                while (!$body->eof()) {
+                    $chunk = $body->read(8192);
+                    if ($chunk === '') {
+                        throw new \RuntimeException("Пустой chunk в потоке");
+                    }
+
+                    fwrite($fh, $chunk);
+                    $downloaded += strlen($chunk);
+
+                    $import->update(['downloaded_bytes' => $downloaded]);
+                }
+
+                break; // успешная загрузка — выходим
+            } catch (\Throwable $e) {
+                $attempt++;
+                Log::warning("Попытка $attempt: ошибка скачивания — " . $e->getMessage());
+                sleep(1); // пауза перед повтором
+            }
         }
 
         fclose($fh);
 
-        Log::info(">>> Загрузка завершена. Перемещаем tmp → xml");
-
-        if (!file_exists($tmpPath)) {
-            throw new \RuntimeException("Файл не найден: $tmpPath");
+        // Проверяем результат
+        if ($downloaded < $totalSize) {
+            throw new \RuntimeException("Файл не скачан полностью: $downloaded / $totalSize");
         }
 
+        // Переименовываем tmp → xml
         rename($tmpPath, $finalPath);
+        Log::info(">>> Загрузка завершена. Файл сохранён: $finalPath");
 
-        if (!file_exists($finalPath)) {
-            throw new \RuntimeException("Файл не переместился: $finalPath");
-        }
-
-        Log::info(">>> Файл успешно перемещён: $finalPath");
-
-        $import->update([
-            'status' => 'parsing',
-            'started_at' => now(),
-        ]);
-
-        Log::info("Отправляем ParseXmlJob с importId = {$import->id}");
-        ParseXmlJob::dispatch($import->id);
+        // Отправляем парсинг
+        Log::info("Отправляем ParseXmlJob с importId = {$this->importId}");
+        dispatch(new \App\Jobs\ParseXmlJob($this->importId));
     }
 
-    protected function getTotalSize($response, int $offset): ?int
+    protected function getTotalSize(string $url): ?int
     {
-        $contentRange = $response->getHeaderLine('Content-Range');
-        if (preg_match('/\/(\d+)$/', $contentRange, $matches)) {
-            return (int) $matches[1];
+        $headers = get_headers($url, 1);
+        if (is_array($headers) && isset($headers['Content-Length'])) {
+            return (int) $headers['Content-Length'];
         }
 
-        $length = $response->getHeaderLine('Content-Length');
-        return $offset + ($length ? (int) $length : 0);
-    }
-
-    public function failed(Throwable $e): void
-    {
-        Log::error("DownloadXmlJob failed: " . $e->getMessage());
-        Import::where('id', $this->importId)->update([
-            'status' => 'failed',
-            'error' => $e->getMessage(),
-        ]);
+        return null;
     }
 }
