@@ -13,6 +13,7 @@ class XmlCategoryParserService
     {
         $reader = new XMLReader();
         $reader->open($path);
+        $skipped = 0;
 
         Log::info(">>> START XmlCategoryParserService # $path");
 
@@ -20,9 +21,15 @@ class XmlCategoryParserService
             if ($reader->nodeType === XMLReader::ELEMENT && $reader->name === 'category') {
                 try {
                     $categoryNode = new SimpleXMLElement($reader->readOuterXML());
-                    $id = (string) $categoryNode['id'];
-                    $parentId = isset($categoryNode['parentId']) ? (string) $categoryNode['parentId'] : null;
-                    $name = (string) $categoryNode;
+                    $id = trim((string) $categoryNode['id']);
+                    $parentId = isset($categoryNode['parentId']) ? trim((string) $categoryNode['parentId']) : null;
+                    $name = trim(strip_tags((string) $categoryNode));
+
+                    if (!$id || !$name) {
+                        Log::warning("Пропущена категория: id='{$id}', name='{$name}'");
+                        $skipped++;
+                        continue;
+                    }
 
                     DB::table('categories')->updateOrInsert(
                         ['id' => $id],
@@ -40,6 +47,6 @@ class XmlCategoryParserService
         }
 
         $reader->close();
-        Log::info(">>> END ParseXmlJob categories");
+        Log::info(">>> END ParseXmlJob categories, Пропущено: $skipped");
     }
 }

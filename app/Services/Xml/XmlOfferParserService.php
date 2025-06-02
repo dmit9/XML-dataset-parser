@@ -38,14 +38,14 @@ class XmlOfferParserService
 
                 $productId = (int) $node['id'];
                 $available = filter_var((string) $node['available'], FILTER_VALIDATE_BOOLEAN);
-                $name = (string) $node->name;
+                $name = trim(strip_tags((string) $node->name));
                 $price = (float) $node->price;
-                $desc = (string) $node->description ?? '';
-                $desc_f = (string) $node->description_format ?? '';
-                $categoryId = (string) $node->categoryId;
-                $vendor = (string) $node->vendor;
-                $vendorCode = (string) $node->vendorCode;
-                $barcode = (string) $node->barcode ?? null;
+                $desc = trim(strip_tags((string) $node->description ?? ''));
+                $desc_f = trim(strip_tags((string) $node->description_format ?? ''));
+                $categoryId = trim((string) $node->categoryId);
+                $vendor = trim(strip_tags((string) $node->vendor));
+                $vendorCode = trim(strip_tags((string) $node->vendorCode));
+                $barcode = trim((string) $node->barcode ?? null);
                 $stock = (int) $node->count ?? 0;
 
                 if (!$productId || !$name || !$price) {
@@ -86,9 +86,9 @@ class XmlOfferParserService
                 $paramIds = [];
 
                 foreach ($node->param as $param) {
-                    $paramName = (string) $param['name'];
-                    $paramValue = trim((string) $param);
-                    if (!$paramValue) continue;
+                    $paramName = trim(strip_tags((string) $param['name']));
+                    $paramValue = trim(strip_tags((string) $param));
+                    if (!$paramName || !$paramValue) continue;
 
                     $slug = $slugCache[$paramName] ??= Str::slug($paramName, '_');
 
