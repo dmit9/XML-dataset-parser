@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Category;
 use App\Services\Xml\XmlCategoryParserService;
 use App\Models\Import;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class XmlCategoryParserServiceTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_parses_categories_correctly()
     {
         $xml = <<<XML

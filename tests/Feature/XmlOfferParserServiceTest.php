@@ -6,11 +6,14 @@ use Tests\TestCase;
 use App\Models\Import;
 use App\Services\Xml\XmlOfferParserService;
 use Illuminate\Support\Facades\Redis;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class XmlOfferParserServiceTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_offer_is_parsed_and_inserted()
     {
+        parent::setUp();
         Redis::flushall(); // очистка Redis
 
         $xml = <<<XML
@@ -45,6 +48,8 @@ class XmlOfferParserServiceTest extends TestCase
         $this->assertEquals(1, $count);
         $this->assertDatabaseHas('products', ['id' => 1001, 'name' => 'Товар 1', 'price' => 1999.99]);
         $this->assertTrue(Redis::sismember('filter:color:Черный', 1001));
+
+        Redis::flushall();
     }
 }
 

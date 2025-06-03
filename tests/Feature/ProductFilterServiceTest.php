@@ -19,6 +19,7 @@ class ProductFilterServiceTest extends TestCase
 
     public function test_filtered_ids_and_counts()
     {
+        parent::setUp();
         Redis::flushall();
 
         // Параметр
@@ -48,6 +49,8 @@ class ProductFilterServiceTest extends TestCase
         $filters = $service->getFilterStats(['color' => 'Черный']);
         $this->assertTrue($filters[0]['values'][0]['active']);
         $this->assertEquals('Черный', $filters[0]['values'][0]['value']);
+        Redis::flushall();
+
     }
 }
 
